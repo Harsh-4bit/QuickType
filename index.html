@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickType</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="wrapper">
+    <div class="head">
+        <p id="topic">Quick Type</p>
+        <p id="name">Made by Harsh-4bit</p>
+    </div>
+    
+    <div class="type">
+        <button id="human">Human</button>
+        <button id="coder">Coder</button>
+    </div>
+
+    <div class="container">
+        <div class="level">
+            <button id="easy">Easy</button>
+            <button id="medium">Medium</button>
+            <button id="hard">Hard</button>
+        </div>
+    
+        <div class="lang">
+            <button id="cpp">C++</button>
+            <button id="java">Java</button>
+            <button id="all">Others</button>
+        </div>
+    </div>
+    
+    <div class="sec">
+        <h5 id="time">Choose Time</h5>
+        <div class="time_button">
+            <button id="s20">20sec</button>
+            <button id="s60">60sec</button>
+            <button id="s100">100sec</button>
+        </div>
+    </div>
+
+    <div class="render">
+        <div class="start">
+            <button id="start_button">Start</button>
+        </div>
+        
+        <div class="visOnClick">
+            <p id="para"></p>
+            <span id="tmp"></span>
+        
+            <div class="disp_time">
+                <img src="timr2.png" alt="Error" id="img">
+                <div class="vary">
+                    <p id="clock">60</p>
+                </div>
+            </div>
+            
+            <div id="res">
+                <p id="config">hh</p>
+                <p id="acc_str">Accuracy : </p>
+                <p id="acc"></p>
+                <p id="sp_str">Speed : </p>
+                <p id="sp"></p>
+            </div>
+        
+        </div>
+    </div>
+
+    <div class="input_box">
+        <input type="text" id="input" placeholder="." spellcheck="false" autocomplete="off">
+    </div>
+
+
+   </div>
+    <script src="script.js"></script>
+</body>

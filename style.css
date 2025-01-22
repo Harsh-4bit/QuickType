@@ -1,0 +1,254 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    background-image: url(img.jpg);
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    margin: 0px;
+    padding: 0px;
+}
+.head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#topic{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    border: 1.7px solid salmon;
+    margin-bottom: 5px;
+    width: 50%;
+    height: 65px;
+    font-weight: bold;
+    padding-top:12px ;
+    background-color: rgba(250, 128, 115, 0.3)
+}
+#name{
+    text-align: center;
+    font-size: small;
+    color: white;
+    font-style: italic;
+    margin-top: 0px;
+}
+.type{
+    width: 100%;
+    height: 25px;
+    padding: 30px 0px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+.container{
+    display: flex;
+    width: 100%;
+    height: 100px;
+}
+.level, .lang{
+    display: none;
+    justify-content: space-evenly;
+    height: 25px;
+    width: 100%;
+    padding: 20px 0px;
+}
+#human.active, #coder.active{
+    background-color: rgb(214, 177, 249);
+    color: black;
+}
+#human:hover, #coder:hover{
+    background-color: rgb(214, 177, 249);
+    color: black;
+}
+#human, #coder{  
+    color: white;
+    border-color: rgb(144, 17, 248);
+    border-width: 3px;
+    border-radius: 5px;
+    background-color: black;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    width: 80px;
+    height: 30px;
+    padding: 2px;
+}
+#easy, #medium, #hard, #cpp, #java, #all{
+    color: black;
+    border-color: rgb(144, 17, 248);
+    border-width: 3px;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 550;
+    width: 80px;
+    height: 30px;
+    padding: 2px;
+}
+#easy.aeasy, #easy:hover{
+    background-color: rgb(207, 247, 207);
+    color: rgb(5, 194, 55);
+}
+#medium.amed, #medium:hover{
+    background-color: rgb(244, 216, 164);
+    color: orange;
+}
+#hard.ahard, #cpp.ahard, #java.ahard, #all.ahard, #hard:hover, #cpp:hover, #java:hover, #all:hover{
+    background-color: rgb(243, 199, 199);
+    color: red;
+}
+#cpp:hover, #java:hover, #all:hover{
+    background-color: rgb(240, 180, 180);
+}
+.render{
+    display: flex;
+    flex-direction: column;
+}
+.start{
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+}
+#start_button{
+    font-size: 20px;
+    border-radius: 4px;
+    background-color: black;
+    border-width: 7px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-color: rgb(144, 17, 248);
+    cursor: pointer;
+    color: white;
+}
+#start_button:hover{
+    background-color: aqua;
+    color:rgb(5, 6, 6);
+}
+.visOnClick{
+    width: 70%;
+    height: 300px;
+    margin: 0px;
+    padding: 0px 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin: 0px;
+}
+#para{
+    margin: 10px;
+    height: 40%;
+    width: 80%;
+    text-align:justify;
+    padding-top: 50px;
+    font-size: 30px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+.result{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px;
+}
+.input_box{
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+#input{
+    height: 80px;
+    width: 200px;
+    display: none;
+    border: none;
+    outline: none;
+    caret-color: rgb(57, 1, 117);
+    background: none;
+    color: rgb(57, 1, 117);
+}
+
+.sec{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+}
+#time{
+    font-size: 30px;
+    font-style: bold;
+    color: white;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+.time_button{
+    padding: 20px;
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#s20, #s60, #s100{
+    font-size: 15px;
+    border-width: 5px;
+    border-color: rgb(152, 53, 244);
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: white;
+    color: rgb(173, 179, 178);
+}
+#s20:hover, #s60:hover, #s100:hover, #s20.pick, #s60.pick, #s100.pick{
+    color: red;
+}
+.disp_time{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+}
+#img{
+    display: none;
+    width: 32px;
+    height: 30px;
+    padding: 10px 0px;
+}
+.vary{
+    width: 50px;
+    height: 20px;
+}
+#clock{
+    display: none;
+    color: white;
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+#acc_str, #acc, #sp_str, #sp{
+    display: none;
+    font-size: 30px;
+    color: rgb(255, 170, 160);
+}
+#acc, #sp{
+    font-size: 30px;
+    margin-left: 5px;
+    color: rgb(252, 250, 250);
+}
+#acc{
+    margin-right: 250px;
+}
+#config{
+    display: none;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    font-size: 33px;
+    color: white;
+    border: 2px solid salmon;
+    padding-bottom: 3px;
+}
