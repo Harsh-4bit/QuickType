@@ -225,8 +225,8 @@ document.addEventListener("DOMContentLoaded", function(){
             const ch = cur.slice(cur.length - 1);
     
             if (ch === str[i]) {
-                let new_str =`<span style="color: lime; font-family: 'Courier New', Courier, monospace;">${str.slice(0, i)}</span>`;
-                new_str += `<span style="color: lime; font-family: 'Courier New', Courier, monospace;">${ch}</span>`;
+                let new_str =`<span style="color: aquamarine; font-family: 'Courier New', Courier, monospace;">${str.slice(0, i)}</span>`;
+                new_str += `<span style="color: aquamarine; font-family: 'Courier New', Courier, monospace;">${ch}</span>`;
                 new_str += str.slice(i + 1);
                 Para.innerHTML = new_str;
                 i++;
@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", function(){
                     Para.textContent = str; 
                 }
             } else if (ch !== str[i]) {
-                let new_str = `<span style="color: lime; font-family: 'Courier New', Courier, monospace;">${str.slice(0, i)}</span>`;
+                let new_str = `<span style="color: aquamarine; font-family: 'Courier New', Courier, monospace;">${str.slice(0, i)}</span>`;
                 new_str += `<span style="color: red; font-family: 'Courier New', Courier, monospace;">${str[i]}</span>`;
                 new_str += str.slice(i + 1);
                 Para.innerHTML = new_str;

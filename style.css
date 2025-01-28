@@ -7,14 +7,18 @@ body{
     background-position: center;
     background-size: cover;
 }
-.wrapper{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: 1;
-    margin: 0px;
-    padding: 0px;
+
+.wrapper {
+    border: 2px;
+    width: 80%;
+    height: 80%;
+    background-color: rgb(252, 250, 250, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 25px;
+    margin: 10px auto;
 }
+
 .head{
     display: flex;
     flex-direction: column;
@@ -22,15 +26,51 @@ body{
 }
 #topic{
     text-align: center;
-    font-size: 40px;
+    box-shadow: 2.5px 2.5px 2.5px 2.5px  rgba(249, 159, 246, 0.5);
+    font-size: 4px; /*40px*/
     color: white;
-    border: 1.7px solid salmon;
+    border: 1.7px solid transparent;
     margin-bottom: 5px;
-    width: 50%;
+    margin-right: 500px;
+    width: 5%; /*50%*/
     height: 65px;
     font-weight: bold;
-    padding-top:12px ;
-    background-color: rgba(250, 128, 115, 0.3)
+    padding-top:4px ;
+    border-radius: 40px;
+    background-color: rgb(94, 25, 158);
+    animation: slide 0.3s ease-in forwards, fontInc 0.4s ease-in forwards;
+}
+
+#blink{
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    animation: blinking 0.8s ease infinite;
+}
+@keyframes blinking{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+@keyframes slide{
+    0%{
+        width: 5%;
+        margin-right: 500px;
+    }
+    100%{
+        width: 50%;
+        margin-right: 0px;
+    }
+}
+@keyframes fontInc {
+    0%{
+        font-size: 0px;
+    }
+    100%{
+        font-size: 40px;
+    }
 }
 #name{
     text-align: center;
@@ -38,11 +78,13 @@ body{
     color: white;
     font-style: italic;
     margin-top: 0px;
+    
 }
 .type{
     width: 100%;
     height: 25px;
     padding: 30px 0px;
+    margin: 30px 0px;
     text-align: center;
     display: flex;
     justify-content: space-evenly;
@@ -51,85 +93,110 @@ body{
     display: flex;
     width: 100%;
     height: 100px;
+    margin: 20px 0px;
 }
 .level, .lang{
     display: none;
     justify-content: space-evenly;
     height: 25px;
-    width: 100%;
+    width: 75%;
     padding: 20px 0px;
+    margin: 0px auto;
 }
 #human.active, #coder.active{
-    background-color: rgb(214, 177, 249);
-    color: black;
+    background-color: black;
+    color: white;
+    transform: scale(1.2);
+    transition: transform 0.2s ease, color 0.3s ease;
 }
 #human:hover, #coder:hover{
-    background-color: rgb(214, 177, 249);
-    color: black;
+    background-color: black;
+    color: white;
+    transform: scale(1.2);
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.2s ease;
 }
 #human, #coder{  
-    color: white;
+    color: black;
     border-color: rgb(144, 17, 248);
-    border-width: 3px;
+    border-width: 2px;
+    border-color: transparent;
     border-radius: 5px;
-    background-color: black;
+    background-color: rgb(214, 177, 249);
     cursor: pointer;
     font-size: 15px;
     font-weight: bold;
-    width: 80px;
-    height: 30px;
+    width: 300px;
+    height: 45px;
     padding: 2px;
+    
 }
 #easy, #medium, #hard, #cpp, #java, #all{
-    color: black;
-    border-color: rgb(144, 17, 248);
+    color: white;
+    background-color: rgb(220, 211, 211);
+    border-color: transparent;
     border-width: 3px;
     border-radius: 5px;
-    background-color: white;
     cursor: pointer;
     font-size: 15px;
     font-weight: 550;
-    width: 80px;
-    height: 30px;
+    width: 100px;
+    height: 45px;
     padding: 2px;
 }
+#easy{
+    background-color: rgb(80, 248, 80);
+}
 #easy.aeasy, #easy:hover{
-    background-color: rgb(207, 247, 207);
-    color: rgb(5, 194, 55);
+    background-color: white;
+    color: rgb(80, 248, 80);
+    transform: scale(1.2);
+    transition: transform 0.2s ease, background-color 0.12s ease, color 0.3s ease;
+}
+#medium{
+    background-color: rgb(255, 180, 41);
 }
 #medium.amed, #medium:hover{
-    background-color: rgb(244, 216, 164);
+    background-color: white;
     color: orange;
+    transform: scale(1.2);
+    transition: transform 0.2s ease, background-color 0.12s ease, color 0.3s ease;
+}
+#hard{
+    background-color: red;
 }
 #hard.ahard, #cpp.ahard, #java.ahard, #all.ahard, #hard:hover, #cpp:hover, #java:hover, #all:hover{
-    background-color: rgb(243, 199, 199);
+    background-color: white;
     color: red;
-}
-#cpp:hover, #java:hover, #all:hover{
-    background-color: rgb(240, 180, 180);
+    transform: scale(1.2);
+    transition: transform 0.2s ease, background-color 0.12s ease, color 0.3s ease;
 }
 .render{
+    margin-top: 90px;
     display: flex;
     flex-direction: column;
 }
 .start{
-    margin: 40px;
+    
     display: flex;
     justify-content: center;
 }
 #start_button{
     font-size: 20px;
+    width: 80px;
+    height: 40px;
     border-radius: 4px;
     background-color: black;
-    border-width: 7px;
+    border-width: 2px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    border-color: rgb(144, 17, 248);
+    border-color: transparent;
     cursor: pointer;
     color: white;
 }
 #start_button:hover{
     background-color: aqua;
     color:rgb(5, 6, 6);
+    transform: rotateY(1turn) scale(1.2); 
+    transition: all 0.45s ease;
 }
 .visOnClick{
     width: 70%;
@@ -149,9 +216,9 @@ body{
     text-align:justify;
     padding-top: 50px;
     font-size: 30px;
+    font-weight:500;
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    
 }
 .result{
     display: flex;
@@ -189,6 +256,7 @@ body{
     margin-top: 20px;
 }
 .time_button{
+    margin: 20px 0px;
     padding: 20px;
     width: 300px;
     display: flex;
@@ -196,8 +264,11 @@ body{
 }
 #s20, #s60, #s100{
     font-size: 15px;
-    border-width: 5px;
-    border-color: rgb(152, 53, 244);
+    margin: 0px 20px;
+    width: 80px;
+    height: 30px;
+    border-width: 2px;
+    border-color: transparent;
     border-radius: 8px;
     cursor: pointer;
     background-color: white;
@@ -205,6 +276,9 @@ body{
 }
 #s20:hover, #s60:hover, #s100:hover, #s20.pick, #s60.pick, #s100.pick{
     color: red;
+    transform: rotateZ(30deg) scale(1.2);
+    transition: transform 0.15s ease;
+
 }
 .disp_time{
     width: 100%;
@@ -231,11 +305,11 @@ body{
 
 #acc_str, #acc, #sp_str, #sp{
     display: none;
-    font-size: 30px;
+    font-size: 38px;
     color: rgb(255, 170, 160);
 }
 #acc, #sp{
-    font-size: 30px;
+    font-size: 38px;
     margin-left: 5px;
     color: rgb(252, 250, 250);
 }
@@ -245,10 +319,27 @@ body{
 #config{
     display: none;
     text-align: center;
-    width: 100%;
+    background-color: rgba(255, 192, 203, 0.6);
+    width: 33%;
+    margin: 30px auto;
     height: 40px;
     font-size: 33px;
     color: white;
     border: 2px solid salmon;
     padding-bottom: 3px;
+    animation: dance 4s ease infinite;
+}
+@keyframes dance {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(55deg);
+    }
+    75%{
+        transform: rotate(-55deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
 }
